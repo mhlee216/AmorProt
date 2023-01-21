@@ -31,5 +31,4 @@ ap = AmorProt(maccs=True, ecfp4=True, ecfp6=True, rdkit=True)
 fps_list = parmap.map(make_fp, [[ap, sq] for sq in df['sequence'].tolist()], 
                       pm_pbar=True, pm_processes=20)
 fps = np.array(fps_list)
-fps
 ```
