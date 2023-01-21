@@ -1,0 +1,9 @@
+README.md
+setup.py
+amorprot/AmorProt.py
+amorprot/__init__.py
+amorprot.egg-info/PKG-INFO
+amorprot.egg-info/SOURCES.txt
+amorprot.egg-info/dependency_links.txt
+amorprot.egg-info/requires.txt
+amorprot.egg-info/top_level.txt
