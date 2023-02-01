@@ -1,6 +1,6 @@
 # AmorProt: Amino Acid Molecular Fingerprints Repurposing-based Protein Fingerprint
 
-* PyPI (pip):
+* PyPI:
 
 ```console
 $ pip install amorprot
