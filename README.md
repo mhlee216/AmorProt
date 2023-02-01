@@ -6,7 +6,7 @@
 $ pip install amorprot
 ```
 
-* Example (python):
+* Example:
 
 ```python
 from amorprot import AmorProt
