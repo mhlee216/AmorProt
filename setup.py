@@ -1,7 +1,10 @@
+#!/usr/bin/env python
+# coding: utf-8
+
 from setuptools import setup, find_packages
 
 setup(name='amorprot',
-      version="1.0.0",
+      version="1.0.1",
       url='https://github.com/mhlee216/AmorProt',
       packages=find_packages(),
       author='Myeonghun Lee',
