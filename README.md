@@ -4,7 +4,7 @@
 
 <a href="https://arxiv.org/abs/2303.16209">https://arxiv.org/abs/2303.16209</a>
 
-Myeonghun Lee+,*, Kyoungmin Min*
+Myeonghun Lee<sup>+,</sup>\*, Kyoungmin Min\*
 
 * PyPI:
 
