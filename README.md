@@ -1,4 +1,10 @@
-# AmorProt: Amino Acid Molecular Fingerprints Repurposing-based Protein Fingerprint
+# AmorProt
+
+#### AmorProt: Amino Acid Molecular Fingerprints Repurposing-based Protein Fingerprint
+
+<a href="https://arxiv.org/abs/2303.16209">https://arxiv.org/abs/2303.16209</a>
+
+Myeonghun Lee+,*, Kyoungmin Min*
 
 * PyPI:
 
