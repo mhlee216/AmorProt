@@ -8,7 +8,7 @@ from rdkit.Chem import MACCSkeys
 
 
 class AmorProt:
-    def __init__(self, maccs=True, ecfp4=True, ecfp6=True, rdkit=True, W=10, A=10, R=0.85):
+    def __init__(self, maccs=True, ecfp4=True, ecfp6=True, rdkit=True, A=10, W=10, R=0.85):
         
         self.AA_dict = {'G':'NCC(=O)O', 
                         'A':'N[C@@]([H])(C)C(=O)O', 
@@ -35,8 +35,8 @@ class AmorProt:
         self.ecfp4 = ecfp4
         self.ecfp6 = ecfp6
         self.rdkit = rdkit
-        self.W = W
         self.A = A
+        self.W = W
         self.R = R
         
         if self.maccs:
@@ -64,8 +64,8 @@ class AmorProt:
                 self.rdkit_dict[aa] = np.array(AllChem.RDKFingerprint(mol)).tolist()
     
     # the smoothed trigonometric function 
-    def T(self, fp, p, W=10, A=10, R=0.85):
-        return (((np.sin(pos[i]/A))/W)+R)*np.array(fp)
+    def T(self, fp, p, A=10, W=10, R=0.85):
+        return (((np.sin(pos[i]/W))/A)+R)*np.array(fp)
     
     def fingerprint(self, seq):
         
@@ -76,7 +76,7 @@ class AmorProt:
             maccs_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                maccs_list.append(T(self.maccs_list[aa], pos[i], W=self.W, A=self.A, R=self.R))
+                maccs_list.append(T(self.maccs_list[aa], pos[i], A=self.A, W=self.W, R=self.R))
             maccs_array = np.array(maccs_list, dtype=np.float32)
             arrays.append(maccs_array)
         
@@ -84,7 +84,7 @@ class AmorProt:
             ecfp4_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                ecfp4_list.append(T(self.ecfp4_dict[aa], pos[i], W=self.W, A=self.A, R=self.R))
+                ecfp4_list.append(T(self.ecfp4_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
             ecfp4_array = np.array(ecfp4_list, dtype=np.float32)
             arrays.append(ecfp4_array)
         
@@ -92,7 +92,7 @@ class AmorProt:
             ecfp6_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                ecfp6_list.append(T(self.ecfp6_dict[aa], pos[i], W=self.W, A=self.A, R=self.R))
+                ecfp6_list.append(T(self.ecfp6_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
             ecfp6_array = np.array(ecfp6_list, dtype=np.float32)
             arrays.append(ecfp6_array)
         
@@ -100,7 +100,7 @@ class AmorProt:
             rdkit_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                rdkit_list.append(T(self.rdkit_dict[aa], pos[i], W=self.W, A=self.A, R=self.R))
+                rdkit_list.append(T(self.rdkit_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
             rdkit_array = np.array(rdkit_list, dtype=np.float32)
             arrays.append(rdkit_array)
         
