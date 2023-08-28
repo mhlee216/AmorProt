@@ -1,5 +1,7 @@
 # AmorProt
 
+<img src="https://github.com/mhlee216/AmorProt/blob/main/main.png">
+
 #### AmorProt: Amino Acid Molecular Fingerprints Repurposing-based Protein Fingerprint
 
 <a href="https://doi.org/10.1021/acs.biochem.3c00253">https://doi.org/10.1021/acs.biochem.3c00253</a>
