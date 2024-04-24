@@ -76,7 +76,7 @@ class AmorProt:
             maccs_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                maccs_list.append(T(self.maccs_list[aa], pos[i], A=self.A, W=self.W, R=self.R))
+                maccs_list.append(self.T(self.maccs_list[aa], pos[i], A=self.A, W=self.W, R=self.R))
             maccs_array = np.array(maccs_list, dtype=np.float32)
             arrays.append(maccs_array)
         
@@ -84,7 +84,7 @@ class AmorProt:
             ecfp4_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                ecfp4_list.append(T(self.ecfp4_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
+                ecfp4_list.append(self.T(self.ecfp4_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
             ecfp4_array = np.array(ecfp4_list, dtype=np.float32)
             arrays.append(ecfp4_array)
         
@@ -92,7 +92,7 @@ class AmorProt:
             ecfp6_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                ecfp6_list.append(T(self.ecfp6_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
+                ecfp6_list.append(self.T(self.ecfp6_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
             ecfp6_array = np.array(ecfp6_list, dtype=np.float32)
             arrays.append(ecfp6_array)
         
@@ -100,7 +100,7 @@ class AmorProt:
             rdkit_list = []
             for i in range(len(seq)):
                 aa = seq[i]
-                rdkit_list.append(T(self.rdkit_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
+                rdkit_list.append(self.T(self.rdkit_dict[aa], pos[i], A=self.A, W=self.W, R=self.R))
             rdkit_array = np.array(rdkit_list, dtype=np.float32)
             arrays.append(rdkit_array)
         
